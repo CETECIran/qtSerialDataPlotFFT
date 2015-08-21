@@ -239,9 +239,7 @@ void MainWindow::setupFFTDataPlot(QCustomPlot *customPlot,double data)
   for (int i=0; i<N; i++)
   {
     x[i] = i;
-    y0[i] =freqs[i].real()*freqs[i].real()+20; //exp(-i/150.0)*cos(i/10.0); // exponentially decaying cosine
-//    qsrand(qrand());
-    //y1[i] = freqs[i].real();             // exponential envelope
+    y0[i] =freqs[i].real()+20; 
   }
   // configure right and top axis to show ticks but no labels:
   // (see QCPAxisRect::setupFullAxesBox for a quicker method to do this)
